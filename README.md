@@ -1,2 +1,2 @@
-# WebRTC Demo
-Audio and video streaming app
+# Django Meet
+Simple video Conference Management.
