@@ -1,0 +1,44 @@
+{
+  "name": "Django Meet Api",
+
+  "dockerComposeFile": [
+    "../docker-compose.yml",
+    "docker-compose.yml"
+  ],
+
+  "service": "vscode",
+
+  "workspaceFolder": "/workspace",
+
+  "customizations": {
+	"settings": {
+    "python.pythonPath": "/opt/djmeet/bin/python"
+	},
+	"vscode": {
+		"extensions": [
+			"dbaeumer.vscode-eslint",
+			"donjayamanne.githistory",
+			"eamodio.gitlens",
+			"esbenp.prettier-vscode",
+			"Gruntfuggly.todo-tree",
+			"ms-python.isort",
+			"ms-python.flake8",
+			"ms-python.python",
+			"ms-python.black-formatter",
+			"ms-vscode.makefile-tools",
+			"ms-python.vscode-pylance",
+			"redhat.vscode-yaml",
+			"streetsidesoftware.code-spell-checker",
+			"streetsidesoftware.code-spell-checker-portuguese",
+			
+		]
+	}
+  },
+  
+  "remoteUser": "user",
+  "postCreateCommand": "chmod +x /opt/djmeet/bin/activate"
+}
+
+
+
+

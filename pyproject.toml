@@ -1,0 +1,75 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "base"
+version = "0.1"
+dependencies = [
+  "boto3",
+  "Collectfast",
+  "Django",
+  "django-cleanup",
+  "django-filter",
+  "django-cors-headers",
+  "django-extensions",
+  "django-storages",
+  "djangorestframework",
+  "djangorestframework-simplejwt",
+  "drf-spectacular",
+  "gunicorn",
+  "httpx",
+  "pytz",
+  "psycopg2-binary",
+  "python-decouple",
+]
+
+[project.optional-dependencies]
+dev = [
+  "black",
+  "coverage",
+  "django-silk",
+  "isort",
+  "Faker",
+  "factory-boy",
+  "flake8",
+  "pylint-django",
+  "pytest",
+  "pytest-cov",
+  "pytest-django",
+  "Flake8-pyproject",
+
+]
+
+[tool.pip-tools]
+generate-hashes = true
+
+# ---- Development tools config ----
+
+[tool.flake8]
+max-line-length = 120
+exclude = [
+    ".venv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".tox",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+]
+select = "C,E,F,W,B,B950"
+extend-ignore = "E203, F403, F405, E501, E722, F631, W503"
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 120
+include = '\.py'
+exclude = "migrations|venv|.pytest_cache/*|__pycache__/*"
+
+[tool.pytest]
+filterwarnings = "ignore::pytest.PytestAssertRewriteWarning"
