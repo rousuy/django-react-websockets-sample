@@ -9,10 +9,9 @@ class ServerFilter(filters.FilterSet):
 
     class Meta:
         models.Server
-        fields = ["category", "instructor"]
+        fields = ["category_id", "instructor_id"]
 
     def filter_members(self, queryset, name, value):
-        print("Entrou no filter")
         if value == "true":
             return queryset.annotate(with_num_members=Count("members"))
         return queryset

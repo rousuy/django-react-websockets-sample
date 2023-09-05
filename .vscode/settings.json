@@ -68,6 +68,7 @@
   "workbench.colorTheme": "One Dark Pro Darker",
   "cSpell.words": [
     "djmeet",
+    "filterset",
     "simplejwt",
     "viewsets"
   ],

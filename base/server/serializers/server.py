@@ -17,18 +17,28 @@ class ChannelSerializer(serializers.ModelSerializer):
 
 
 class ServerSerializer(serializers.ModelSerializer):
-    num_members = serializers.SerializerMethodField()
-
     class Meta:
         model = models.Server
         fields = [
             "id",
             "name",
-            "category",
-            "instructor",
-            "num_members",
+            "category_id",
+            "instructor_id",
+            "members",
             "description",
         ]
+
+
+class ServerListSerializer(ServerSerializer):
+    num_members = serializers.SerializerMethodField()
+    channel_servers = ChannelSerializer(many=True)
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields.pop("members")
+
+    class Meta(ServerSerializer.Meta):
+        fields = ServerSerializer.Meta.fields + ["channel_servers", "num_members"]
 
     def get_num_members(self, instance) -> Optional[int]:
         print(hasattr(instance, "with_num_members"))
@@ -42,10 +52,3 @@ class ServerSerializer(serializers.ModelSerializer):
         if not number_members:
             data.pop("num_members", None)
         return data
-
-
-class ServerListSerializer(ServerSerializer):
-    channel_servers = ChannelSerializer(many=True)
-
-    class Meta(ServerSerializer.Meta):
-        fields = ServerSerializer.Meta.fields + ["channel_servers"]
