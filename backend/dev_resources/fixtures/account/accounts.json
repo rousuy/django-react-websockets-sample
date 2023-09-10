@@ -1,0 +1,211 @@
+[
+{
+  "model": "account.account",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$UAcBQdzkZ1lBXilKTtKizr$jNIlLSyiZfHQx03UnZVuci5Q9ixbW58N/9fxT/d0J3c=",
+    "last_login": null,
+    "is_superuser": true,
+    "first_name": "Super",
+    "last_name": "Admin",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-09-06T23:43:23.617Z",
+    "username": "super_admin",
+    "email": "superadmin@djmeet.com",
+    "role": "Admin",
+    "updated_at": "2023-09-06T23:43:23.956Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "account.account",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$xAtLL7N8s7L0R3wCPpbWOc$iYHAGhlyoUFx8UtUfgOkZfg5H9rFdMJEr0XeajLNev4=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Joseph",
+    "last_name": "Fallen",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-09-07T02:08:45.374Z",
+    "username": "instructor_1",
+    "email": "instructor1@djmeet.com",
+    "role": "Admin",
+    "updated_at": "2023-09-07T02:08:45.757Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "account.account",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$loCIKUGYvbHCDfBGABb8Gt$D7d2Yx02h8qGZneVoMYefNwGguoezCkALWGd1q2qM8Y=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Jhon",
+    "last_name": "Smith",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-09-07T02:09:35.021Z",
+    "username": "instructor_2",
+    "email": "instructor2@djmeet.com",
+    "role": "Admin",
+    "updated_at": "2023-09-07T02:09:35.407Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "account.account",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$rTJbUF2IqiCENYGJzGZ2mv$TdZUU0sLzDuGuQ2hVBYMTbIzNJyhBD7t1nOwf5CchHw=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Sarah",
+    "last_name": "Connor",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-09-07T02:10:21.336Z",
+    "username": "instructor_3",
+    "email": "instructor3@djmeet.com",
+    "role": "Admin",
+    "updated_at": "2023-09-07T02:10:21.710Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "account.account",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$iGiX2fFI9Y915n2dRJUquN$X94Z1tms8M9xeeVrTrXlUn6TLUxHz6qw2A/CaR5py1g=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Janne",
+    "last_name": "Tomphsom",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-09-07T02:11:09.283Z",
+    "username": "instructor_4",
+    "email": "instructor4@djmeet.com",
+    "role": "Admin",
+    "updated_at": "2023-09-07T02:11:09.658Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "account.account",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$lNjAUgco9vAfHJJ8Mu5McD$4eSRc15bGJWZR1HDHWNeUlIzR2xhRLELZ3Ke3yrMJTg=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Will",
+    "last_name": "Django",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-09-07T02:12:10.673Z",
+    "username": "instructor_5",
+    "email": "instructor5@djmeet.com",
+    "role": "Admin",
+    "updated_at": "2023-09-07T02:12:11.139Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "account.account",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$71En5HeQo5qOdSxl7v6Eio$zOP4nJ4Cb3kg4yTqNWqybtekHC8OibNsrJhXlYOx0tM=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Dolores",
+    "last_name": "Tom",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-09-07T02:12:57.505Z",
+    "username": "participant_1",
+    "email": "participant1@djmeet.com",
+    "role": "Admin",
+    "updated_at": "2023-09-07T02:12:57.867Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "account.account",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$Hk6SThT8oPGb61kAlxOjsn$Fo7pQ4II4gUaKMD+tBH7VD4J3njYYrbHKu3tTd26W9s=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Flora",
+    "last_name": "Rica",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-09-07T02:13:34.049Z",
+    "username": "participant2",
+    "email": "participant2@djmeet.com",
+    "role": "Admin",
+    "updated_at": "2023-09-07T02:13:34.417Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "account.account",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$KnIzHS9WrQZ9EokiKtcTMn$Muf/geKizFNjNoiLuhPduQT2Y9DVhJyjZM0g8ymPHAU=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Rose",
+    "last_name": "Texas",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-09-07T02:14:13.431Z",
+    "username": "participant_3",
+    "email": "participant3@djmeet.com",
+    "role": "Admin",
+    "updated_at": "2023-09-07T02:14:13.815Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "account.account",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$rftwWf5D1KQDAjMR0kV5ia$jyyL3WFIbCuQeRHCh2smym5RIDF3cRxuxMMA37yoqZc=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Alex",
+    "last_name": "Silva",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-09-07T02:14:56.480Z",
+    "username": "participant_4",
+    "email": "participant4@djmeet.com",
+    "role": "Admin",
+    "updated_at": "2023-09-07T02:14:56.862Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "account.account",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$331xmoKMWL461w9IXy7TOd$wUp/0wzRFAVNq/KhXdfHNHOfUyx0dkXr9KMoE6kVN8k=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Paola",
+    "last_name": "Carosel",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-09-07T02:15:53.401Z",
+    "username": "participant_5",
+    "email": "participant5@djmeet.com",
+    "role": "Admin",
+    "updated_at": "2023-09-07T02:15:53.779Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

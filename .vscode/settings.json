@@ -1,75 +1,99 @@
 {
-  "window.zoomLevel": 1,
-  "editor.fontSize": 12,
-  "editor.insertSpaces": true,
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
-  "editor.formatOnType": true,
-  "editor.autoIndent": "full",
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1000,
-  "terminal.integrated.fontFamily": "MesloLGS NF",
-  "diffEditor.wordWrap": "on",
-  "editor.wordWrap": "on",
-  "editor.wordWrapColumn": 120,
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": "active",
-  "explorer.compactFolders": false,
-  "terminal.explorerKind": "both",
-  "terminal.sourceControlRepositoriesKind": "both",
-  "editor.rulers": [120],
-  // prettier config
-  "prettier.printWidth": 120,
-  "prettier.endOfLine": "auto",
-  "prettier.singleQuote": true,
-  "prettier.trailingComma": "all",
-  "prettier.arrowParens": "avoid",
-  "prettier.proseWrap": "always",
-  "prettier.htmlWhitespaceSensitivity": "ignore",
-  // python config
-  "python.languageServer": "Pylance", // ms-python.vscode-pylance
-  "python.testing.unittestEnabled": false, // ms-python.python
-  "python.testing.pytestEnabled": true,
-  "python.testing.pytestArgs": [], // -x to bail
-  // ms-isort, ms-flake8 config
-  "isort.args": [
-    "--settings-file",
-    "pyproject.toml",
-    "--settings-file",
-    "setup.cfg"
-  ],
-  "flake8.args": [
-    "--config=pyproject.toml",
-    "--config=setup.cfg",
-    "--config=.flake8"
-  ],
-  "[python]": {
-    "editor.tabSize": 4,
-    "editor.insertSpaces": true,
-    "editor.defaultFormatter": "ms-python.black-formatter"
-  },
-  "[jsonc, json]": {
-    "editor.trimAutoWhitespace": true,
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[yaml, toml]": {
-    "editor.tabSize": 2,
-    "editor.insertSpaces": false
-  },
-  "[makefile]": {
-    "editor.tabSize": 4,
-    "editor.insertSpaces": false
-  },
-  "files.associations": {
-    "**/requirements{/**,*}.{txt,in}": "pip-requirements"
-  },
-  // other stuffs
-  "workbench.iconTheme": "vscode-icons",
-  "workbench.colorTheme": "One Dark Pro Darker",
-  "cSpell.words": [
-    "djmeet",
-    "filterset",
-    "simplejwt",
-    "viewsets"
-  ],
+	"editor.fontSize": 12,
+	"editor.insertSpaces": true,
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"editor.formatOnType": true,
+	"editor.autoIndent": "full",
+	"files.autoSave": "afterDelay",
+	"files.autoSaveDelay": 1000,
+	"terminal.integrated.fontFamily": "Fira Code",
+	"diffEditor.wordWrap": "on",
+	"editor.wordWrap": "on",
+	"editor.wordWrapColumn": 120,
+	"editor.bracketPairColorization.enabled": true,
+	"editor.guides.bracketPairs": "active",
+	"explorer.compactFolders": false,
+	"editor.rulers": [120],
+	"[python]": {
+		"editor.tabSize": 4,
+		"editor.defaultFormatter": "ms-python.black-formatter"
+	},
+	"[javascript]": {
+		"editor.codeActionsOnSave": {
+			"source.fixAll": true,
+			"source.fixAll.eslint": true
+		}
+	},
+	"[jsonc, json]": {
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true,
+		"editor.trimAutoWhitespace": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[yaml, toml]": {
+		"editor.tabSize": 2,
+		"editor.insertSpaces": false
+	},
+	"[makefile]": {
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false
+	},
+	"files.associations": {
+		"*.js": "javascript",
+		"*.jsx": "javascriptreact",
+		"*.xml": "html",
+		"*.svg": "html",
+		"*.html": "html",
+		"**/*.html": "html",
+		"**/requirements{/**,*}.{txt,in}": "pip-requirements"
+	},
+	// Prettier config
+	"prettier.arrowParens": "avoid",
+	"prettier.bracketSpacing": true,
+	"prettier.endOfLine": "auto",
+	"prettier.htmlWhitespaceSensitivity": "strict",
+	"prettier.insertPragma": true,
+	"prettier.bracketSameLine": true,
+	"prettier.proseWrap": "always",
+	"prettier.tabWidth": 2,
+	"prettier.trailingComma": "es5",
+	"prettier.useTabs": true,
+	// Code formatter config
+	"black-formatter.args": [
+		"--config",
+		"pyproject.toml",
+		"--config",
+		"setup.cfg"
+	],
+	// Linter config
+	"flake8.args": [
+		"--config=.flake8",
+		"--config=setup.cfg",
+		"--config=pyproject.toml"
+	],
+	// Spell checker config
+	"cSpell.language": "en,pt,pt_BR",
+	// Emmets
+	"emmet.includeLanguages": {
+		"javascript": "javascriptreact",
+		"typescript": "typescriptreact"
+	},
+	// other stuffs
+	"workbench.iconTheme": "vscode-icons",
+	"workbench.colorTheme": "One Dark Pro Darker",
+	"terminal.sourceControlRepositoriesKind": "both",
+	"window.zoomLevel": 1,
+	"redhat.telemetry.enabled": false,
+	"terminal.explorerKind": "external",
+	"workbench.startupEditor": "none",
+	"diffEditor.maxComputationTime": 0,
+	"cSpell.words": [
+		"COLLECTFAST",
+		"djmeet",
+		"filterset",
+		"novamente",
+		"simplejwt",
+		"viewsets"
+	],
 }
