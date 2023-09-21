@@ -60,7 +60,7 @@ down:
 	$(DC) down
 
 exec:
-	$(DC) run --rm $(cmd)
+	$(DC) exec $(cmd)
 
 build:
 	@echo "Copying environments files..."
@@ -95,6 +95,9 @@ sync:
 
 sh-backend:
 	@make exec cmd="backend bash"
+
+sh-frontend:
+	@make exec cmd="frontend bash"
 
 shell:
 	@make exec cmd="backend $(PY) shell_plus"
