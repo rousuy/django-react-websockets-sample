@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+    "baseUrl": "./src",
+    "target": "ES6",
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      		"src/*": ["./*", "."],
+			"config/*": ["config/*", "config"],
+			"pages/*": ["pages/*", "pages"],
+			"themes/*": ["themes/*", "themes"],
+			"components/*": ["components/*", "components"],
+		},
+	},
+}

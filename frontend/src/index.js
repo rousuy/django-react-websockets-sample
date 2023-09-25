@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App.tsx';
 import reportWebVitals from './reportWebVitals';
-import "./theme/main.css"
+import "./themes/main.css"
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

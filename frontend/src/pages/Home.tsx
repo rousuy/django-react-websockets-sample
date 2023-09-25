@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, CssBaseline } from "@mui/material"
-import PrimaryAppBar from "./templates/PrimaryAppBar.tsx";
-import PrimaryDraw from "./templates/PrimaryDraw.tsx";
-import SecondaryDraw from "./templates/SecondaryDraw.tsx";
-import Main from "./templates/Main.tsx";
+import PrimaryAppBar from "pages/templates/PrimaryAppBar";
+import PrimaryDraw from "pages/templates/PrimaryAppBar";
+import SecondaryDraw from "pages/templates/SecondaryDraw";
+import Main from "pages/templates/Main";
 
 const Home = () => {
     return(

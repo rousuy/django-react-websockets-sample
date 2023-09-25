@@ -1,7 +1,7 @@
 import { Box, Typography, useMediaQuery, styled } from "@mui/material"
 import { useEffect, useState } from "react"
 import { useTheme } from "@mui/material/styles"
-import DrawerToggle from "../../components/PrimaryDraw/DrawToggle.tsx";
+import DrawerToggle from "components/PrimaryDraw/DrawToggle";
 import React from "react";
 import MuiDrawer from "@mui/material/Drawer";
 

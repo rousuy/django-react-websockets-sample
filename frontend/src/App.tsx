@@ -1,6 +1,6 @@
 import React from "react";
-import Home from "./pages/Home.tsx";
-import { createMuiTheme } from "./theme/theme.tsx";
+import Home from "./pages/Home";
+import createMuiTheme from "./themes/theme";
 import {
     Route,
     RouterProvider,
