@@ -7,7 +7,7 @@
 	"editor.autoIndent": "full",
 	"files.autoSave": "afterDelay",
 	"files.autoSaveDelay": 1000,
-	"terminal.integrated.fontFamily": "Fira Code",
+	"terminal.integrated.fontFamily": "monospace",
 	"diffEditor.wordWrap": "on",
 	"editor.wordWrap": "on",
 	"editor.wordWrapColumn": 120,
@@ -97,4 +97,5 @@
 		"simplejwt",
 		"viewsets"
 	],
+	"python.formatting.provider": "none"
 }

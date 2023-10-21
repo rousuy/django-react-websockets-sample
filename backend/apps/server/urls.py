@@ -6,7 +6,19 @@ from apps.server import views
 router = DefaultRouter()
 
 router.register(
-    "select",
+    "servers/categories",
+    views.CategoryViewSet,
+    basename="categories",
+)
+
+router.register(
+    "servers/channels",
+    views.ChannelViewSet,
+    basename="channels",
+)
+
+router.register(
+    "servers",
     views.ServerViewSet,
     basename="servers",
 )

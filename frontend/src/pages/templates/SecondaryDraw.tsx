@@ -3,14 +3,7 @@
 import { Box, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import React from "react";
-import AxiosInstance from "../../axios";
-import useAxiosWithInterceptor from "../../axios";
-import axios from "axios";
 
-
-axios().get("/servers/?category_name=category_1").then(response => {
-	console.log(response.data);
-}).catch((error) => {console.log(error)});
 
 const SecondaryDraw = () => {
 	const theme = useTheme();

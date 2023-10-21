@@ -5,54 +5,38 @@ from rest_framework.response import Response
 from apps.server import models, serializers, filters
 
 
+class CategoryViewSet(viewsets.ViewSet):
+    """
+    Api endpoint to allows list create or update categories.
+    """
+    queryset = models.Category.objects.all()
+    serializer_class = serializers.CategorySerializer
+    filter_backends = [dj_filter.DjangoFilterBackend]
+    filterset_class = filters.CategoryFilter
 
-class ServerViewSet(viewsets.ViewSet):
+
+class ChannelViewSet(viewsets.ViewSet):
+    """
+    Api endpoint to allows list create or update channels.
+    """
+    queryset = models.Channel.objects.all()
+    serializer_class = serializers.ChannelSerializer
+    filter_backends = [dj_filter.DjangoFilterBackend]
+    filterset_class = filters.ChannelFilter
+
+
+class ServerViewSet(viewsets.ModelViewSet):
     """
     Api endpoint to allows list create or update servers.
     """
-
     queryset = models.Server.objects.all()
     serializer_class = serializers.ServerSerializer
     filter_backends = [dj_filter.DjangoFilterBackend]
     filterset_class = filters.ServerFilter
 
-    def get_serializer_class(self):
-        ACTIONS_MAP: dict = {"list": serializers.ServerListSerializer}
-        action = ACTIONS_MAP.get(self.action)
-        return action if action else self.serializer_class
-
     @schema.server_list
     def list(self, request, *args, **kwargs):
-        """
-        Request object containing query parameters.
+        return super(ServerViewSet, self).list(request, *args, **kwargs)
+    
 
-        `Returns`:
 
-        A filtered queryset of servers based on specified parameters,
-        or the full queryset if no filters are applied.
-
-        `Parameters`:
-        - `id(int)`: Filter servers by server ID.
-        - `category_name(str)`: Filter servers by category name.
-        - `qty(int)`: Limit the number of servers returned.
-        - `instructor(int)`: Filter servers by instructor ID.
-        - `by_user(bool)`: Filter servers by authenticated user.
-        - `with_num_members(bool)`: Annotate each server with the number of members.
-
-        `Example`:
-
-        To retrieve all servers in the "gaming" category with at least 5 members,
-        use the following request:
-
-        `[GET]` .../select/?category_name="gaming"&with_num_members=true&qty=5
-
-        To retrieve the first 10 servers that the authenticated user is a member of,
-        use the following request:
-
-        `[GET]` .../select/?by_user=true&qty=10
-        """
-
-        queryset = self.queryset.prefetch_related("channel_servers")
-        get_serializer = self.get_serializer_class()
-        serializer = get_serializer(queryset, many=True)
-        return Response(serializer.data)

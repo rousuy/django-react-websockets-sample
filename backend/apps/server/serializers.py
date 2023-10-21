@@ -5,51 +5,58 @@ from rest_framework import serializers
 from apps.server import models
 
 
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Category
+        fields = [
+            "id",
+            "name",
+            "description",
+            "icon",
+        ]
+
+
 class ChannelSerializer(serializers.ModelSerializer):
+    instructor_id = serializers.IntegerField()
+    server_id = serializers.IntegerField()
     class Meta:
         model = models.Channel
         fields = [
             "id",
+            "server_id",
+            "instructor_id",
             "name",
-            "instructor",
             "topic",
-            "server",
+            "banner",
         ]
 
 
 class ServerSerializer(serializers.ModelSerializer):
+    instructor_id = serializers.IntegerField()
+    category_id = serializers.IntegerField()
+    num_members = serializers.SerializerMethodField()
+   
     class Meta:
         model = models.Server
         fields = [
             "id",
-            "name",
             "category_id",
             "instructor_id",
+            "name",
             "members",
+            "num_members",
             "description",
         ]
-
-
-class ServerListSerializer(ServerSerializer):
-    num_members = serializers.SerializerMethodField()
-    channel_servers = ChannelSerializer(many=True)
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields.pop("members")
-
-    class Meta(ServerSerializer.Meta):
-        fields = ServerSerializer.Meta.fields + ["channel_servers", "num_members"]
-
+        extra_kwargs = {"members": {"write_only": True}}
+    
     def get_num_members(self, instance) -> Optional[int]:
-        print(hasattr(instance, "with_num_members"))
         if hasattr(instance, "with_num_members"):
-            return instance.num_members
+            return instance.with_num_members
         return None
 
     def to_representation(self, instance):
         data = super().to_representation(instance)
         number_members = data.get("num_members")
-        if not number_members:
-            data.pop("num_members", None)
+        if number_members is None:
+            data.pop("num_members")
         return data

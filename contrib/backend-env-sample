@@ -1,20 +1,22 @@
 COMPOSE_PROJECT_NAME=djmeet
 
-DEBUG = True
+DEBUG=True
 
 SECRET_KEY=difine your secret key
 
 ALLOWED_HOSTS=localhost, 127.0.0.1
 
+CORS_ALLOWED_ORIGINS=http://localhost:3000, http://127.0.0.1:3000
+
 # Data base config
 DB_NAME=djmeet-dev
 DB_USER=postgres
 DB_PASSWORD=postgres
-DB_HOST=db
+DB_HOST=djmeet_db
 DB_PORT=5432
 
 # S3 storage config
-S3_ACCESS_KEY = 
-S3_SECRET_KEY =
-S3_BUCKET =
-S3_ENDPOINT = 
+S3_ACCESS_KEY= 
+S3_SECRET_KEY=
+S3_BUCKET=
+S3_ENDPOINT= 

@@ -5,13 +5,19 @@ from drf_spectacular.utils import extend_schema, OpenApiParameter
 QUERY_LOCATION = OpenApiParameter.QUERY
 
 server_list = extend_schema(
-    responses=serializers.ServerListSerializer(many=True),
+    responses=serializers.ServerSerializer(many=True),
     parameters=[
         OpenApiParameter(
             name="category_name",
             type=OpenApiTypes.STR,
             location=QUERY_LOCATION,
-            description="Category of servers to retrieve.",
+            description="Filter by category name.",
+        ),
+        OpenApiParameter(
+            name="category_id",
+            type=OpenApiTypes.INT,
+            location=QUERY_LOCATION,
+            description="Filter by category ID.",
         ),
         OpenApiParameter(
             name="qty",
@@ -26,10 +32,10 @@ server_list = extend_schema(
             description="Filter by instructor ID.",
         ),
         OpenApiParameter(
-            name="by_user",
-            type=OpenApiTypes.BOOL,
+            name="member_id",
+            type=OpenApiTypes.INT,
             location=QUERY_LOCATION,
-            description="Filter by the current authenticated user (true/false)",
+            description="Filter by members IDs (e.g., 1,2,3...)",
         ),
         OpenApiParameter(
             name="with_num_members",
