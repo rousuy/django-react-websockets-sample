@@ -1,6 +1,7 @@
-from apps.server import serializers
 from drf_spectacular.types import OpenApiTypes
 from drf_spectacular.utils import extend_schema, OpenApiParameter
+
+from apps.server import serializers
 
 QUERY_LOCATION = OpenApiParameter.QUERY
 

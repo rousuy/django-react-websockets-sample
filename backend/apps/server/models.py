@@ -1,19 +1,16 @@
 from django.conf import settings
 from django.db import models
-from apps.server.utils import upload
-from apps.server import managers
 from django_cleanup import cleanup
+
+from apps.server import managers
+from apps.server.utils import upload
 
 
 @cleanup.select
 class Category(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(null=True, blank=True)
-    icon = models.ImageField(
-        null=True,
-        blank=True,
-        upload_to=upload.icon_path
-    )
+    icon = models.ImageField(null=True, blank=True, upload_to=upload.icon_path)
 
     def __str__(self):
         return self.name

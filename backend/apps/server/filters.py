@@ -9,8 +9,8 @@ class CategoryFilter(filters.FilterSet):
         model = models.Category
         fields = ["name"]
 
-class ChannelFilter(filters.FilterSet):
 
+class ChannelFilter(filters.FilterSet):
     class Meta:
         model = models.Channel
         fields = ["instructor_id", "name"]
@@ -29,8 +29,7 @@ class ServerFilter(filters.FilterSet):
     class Meta:
         model = models.Server
         fields = ["category_id", "instructor_id"]
-    
-    
+
     def filter_by_qty(self, queryset, _, value):
         return queryset[: int(value)]
 
@@ -38,12 +37,7 @@ class ServerFilter(filters.FilterSet):
         if value is True:
             return queryset.annotate(with_num_members=Count("members"))
         return queryset
-    
+
     def filter_by_members(self, queryset, _, value):
         member_ids = value.split(",")
         return queryset.filter(members__id__in=member_ids)
-
-
-
-
-    

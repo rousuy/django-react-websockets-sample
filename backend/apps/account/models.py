@@ -2,7 +2,6 @@ import django.core.validators as dj_validator
 from django.contrib.auth.models import AbstractUser, PermissionsMixin
 from django.db import models
 
-
 from apps.account import enums, managers
 
 

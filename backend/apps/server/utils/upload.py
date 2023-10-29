@@ -1,5 +1,6 @@
 import os
 from uuid import uuid4
+
 from apps.server import models
 
 
@@ -12,7 +13,7 @@ class PathGenerator:
 
     @classmethod
     def __generate_path(cls, instance, filename: str, prefix: str) -> str:
-        filename = filename[-cls.NAME_LENGTH:]
+        filename = filename[-cls.NAME_LENGTH :]
         field: str = None
 
         if isinstance(instance, models.Server):
@@ -22,7 +23,7 @@ class PathGenerator:
 
         result: str = os.path.join(f"{field}/{prefix}/{str(uuid4())}-{filename}")
         return cls.__clean_path(result)
-    
+
     @staticmethod
     def __clean_path(path: str) -> str:
         return path.lower().replace(" ", "-")

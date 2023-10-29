@@ -19,6 +19,7 @@ class CategorySerializer(serializers.ModelSerializer):
 class ChannelSerializer(serializers.ModelSerializer):
     instructor_id = serializers.IntegerField()
     server_id = serializers.IntegerField()
+
     class Meta:
         model = models.Channel
         fields = [
@@ -34,9 +35,9 @@ class ChannelSerializer(serializers.ModelSerializer):
 class ServerSerializer(serializers.ModelSerializer):
     instructor_id = serializers.IntegerField()
     category_id = serializers.IntegerField()
-    category_name = serializers.StringRelatedField(source='category')
+    category_name = serializers.StringRelatedField(source="category")
     num_members = serializers.SerializerMethodField()
-   
+
     class Meta:
         model = models.Server
         fields = [
@@ -52,7 +53,7 @@ class ServerSerializer(serializers.ModelSerializer):
             "description",
         ]
         extra_kwargs = {"members": {"write_only": True}}
-    
+
     def get_num_members(self, instance) -> Optional[int]:
         if hasattr(instance, "with_num_members"):
             return instance.with_num_members
