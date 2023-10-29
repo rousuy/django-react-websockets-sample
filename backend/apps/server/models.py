@@ -68,7 +68,6 @@ class Channel(models.Model):
         on_delete=models.CASCADE,
         related_name="channel_servers",
     )
-    banner = models.ImageField()
     created_at = models.DateTimeField(auto_now_add=True, null=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
 

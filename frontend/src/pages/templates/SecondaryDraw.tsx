@@ -1,11 +1,14 @@
 /** @format */
 
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import React from "react";
 
+type SecondaryDrawProps = {
+	children: React.ReactNode;
+};
 
-const SecondaryDraw = () => {
+const SecondaryDraw = ({children}: SecondaryDrawProps) => {
 	const theme = useTheme();
 	return (
 		<Box
@@ -17,11 +20,7 @@ const SecondaryDraw = () => {
 				display: { xs: "none", sm: "block" },
 				overflow: "auto",
 			}}>
-			{[...Array(100)].map((_, i) => (
-				<Typography key={i} paragraph>
-					{i + 1}
-				</Typography>
-			))}
+			{children}
 		</Box>
 	);
 };

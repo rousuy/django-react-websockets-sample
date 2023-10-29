@@ -8,6 +8,7 @@ import PopularChannels from "components/PrimaryDraw/PopularChannels";
 import ExploreCategories from "components/SecondaryDraw/ExploreCategories";
 import ExploreServer from "components/Main/ExploreServer";
 
+
 const Home = () => {
     return(
         <Box sx={{ display: "flex" }}>

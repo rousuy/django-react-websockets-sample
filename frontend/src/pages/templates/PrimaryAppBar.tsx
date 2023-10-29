@@ -14,6 +14,8 @@ import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState, useEffect } from "react";
 import React from "react";
+import ExploreCategories from "components/SecondaryDraw/ExploreCategories";
+import AccountButton from "components/PrimaryAppBar/AccountButton";
 
 const PrimaryAppBar = () => {
 	const theme = useTheme();
@@ -38,6 +40,18 @@ const PrimaryAppBar = () => {
 			}
 			setSideMenu(open);
 		};
+	
+	const list = () => (
+		<Box sx={{
+			paddingBottom: theme.primaryAppBar.height,
+			minWidth: 200,
+			}}
+			role="presentation"
+			onClick={toggleDrawer(false)}
+			onKeyDown={toggleDrawer(false)}>
+			<ExploreCategories />
+		</Box>
+	);
 
 	return (
 		<AppBar
@@ -64,11 +78,7 @@ const PrimaryAppBar = () => {
 				</Box>
 
 				<Drawer anchor="left" open={sideMenu} onClose={toggleDrawer(false)}>
-					{[...Array(100)].map((_, i) => (
-						<Typography key={i} paragraph>
-							{i + 1}
-						</Typography>
-					))}
+					{list()}
 				</Drawer>
 
 				<Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
@@ -80,6 +90,8 @@ const PrimaryAppBar = () => {
 						DJMEET
 					</Typography>
 				</Link>
+				<Box sx={{ flexGrow: 1 }}></Box>
+				<AccountButton />
 			</Toolbar>
 		</AppBar>
 	);

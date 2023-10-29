@@ -18,6 +18,7 @@
 	  "rootDir": ".",
     "paths": {
         "config/*": ["config/*"],
+        "context/*": ["context/*"],
         "pages/*": ["pages/*"],
         "components/*": ["components/*"],
         "themes/": ["themes/*"],

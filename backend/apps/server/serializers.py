@@ -34,6 +34,7 @@ class ChannelSerializer(serializers.ModelSerializer):
 class ServerSerializer(serializers.ModelSerializer):
     instructor_id = serializers.IntegerField()
     category_id = serializers.IntegerField()
+    category_name = serializers.StringRelatedField(source='category')
     num_members = serializers.SerializerMethodField()
    
     class Meta:
@@ -41,9 +42,12 @@ class ServerSerializer(serializers.ModelSerializer):
         fields = [
             "id",
             "category_id",
+            "category_name",
             "instructor_id",
-            "name",
             "members",
+            "name",
+            "icon",
+            "banner",
             "num_members",
             "description",
         ]

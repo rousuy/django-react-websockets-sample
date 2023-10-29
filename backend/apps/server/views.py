@@ -1,11 +1,11 @@
 import apps.server.utils.schema as schema
 from django_filters import rest_framework as dj_filter
 from rest_framework import viewsets
-from rest_framework.response import Response
+
 from apps.server import models, serializers, filters
 
 
-class CategoryViewSet(viewsets.ViewSet):
+class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
     """
     Api endpoint to allows list create or update categories.
     """
@@ -15,7 +15,7 @@ class CategoryViewSet(viewsets.ViewSet):
     filterset_class = filters.CategoryFilter
 
 
-class ChannelViewSet(viewsets.ViewSet):
+class ChannelViewSet(viewsets.ReadOnlyModelViewSet):
     """
     Api endpoint to allows list create or update channels.
     """
