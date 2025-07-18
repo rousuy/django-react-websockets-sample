@@ -1,2 +1,2 @@
-# Django Meet
-Simple video Conference Management.
+# Django + React + WebSockets
+Simple chat with websockets application.
